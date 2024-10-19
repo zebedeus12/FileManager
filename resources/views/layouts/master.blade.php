@@ -22,7 +22,7 @@
             overflow: hidden;
             width: 100%;
             /* Biarkan mengambil 100% lebar kontainer */
-            max-width: 1000px;
+            max-width: 1200px;
             /* Tentukan maksimal lebar untuk memperbesar ukuran card */
             height: auto;
         }
