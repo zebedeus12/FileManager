@@ -7,10 +7,6 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-
         .login-container {
             height: 100vh;
             display: flex;
@@ -24,17 +20,25 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
+            width: 100%;
+            /* Biarkan mengambil 100% lebar kontainer */
+            max-width: 1200px;
+            /* Tentukan maksimal lebar untuk memperbesar ukuran card */
+            height: auto;
         }
 
         .login-image {
             width: 100%;
             height: auto;
+            object-fit: cover;
         }
 
         .login-form {
             background-color: white;
-            padding: 2rem;
-            width: 400px;
+            padding: 3rem;
+            /* Tambah padding untuk memperbesar form */
+            width: 500px;
+            /* Sesuaikan lebar form */
         }
 
         .login-form h2 {
@@ -42,6 +46,7 @@
             text-align: center;
         }
     </style>
+
 </head>
 
 <body>

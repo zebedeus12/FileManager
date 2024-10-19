@@ -1,6 +1,20 @@
 @extends('layouts.master')
 
 @section('title', 'Login')
+<style>
+    @media (max-width: 768px) {
+        .login-content {
+            flex-direction: column;
+            max-width: 100%;
+            /* Pastikan card mengambil lebar penuh di layar kecil */
+        }
+
+        .login-form {
+            width: 100%;
+            padding: 2rem;
+        }
+    }
+</style>
 
 @section('content')
 <div class="col-md-6 p-0">
