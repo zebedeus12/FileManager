@@ -38,26 +38,34 @@
         </div>
     @endif
 
-    <form action="{{ route('login') }}" method="POST">
+    <form action="{{ route('login') }}" method="POST" id="login-form">
         @csrf
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" name="email" required
                 placeholder="Masukkan email yang valid">
-            <small class="form-text text-muted">Pastikan memasukkan email yang valid, contoh: name@example.com</small>
+            <div class="invalid-feedback">
+                Harap masukkan email yang benar. Contoh: name@example.com
+            </div>
         </div>
+
         <div class="form-group">
             <label for="password">Password:</label>
-            <div class="input-group-append">
+            <div class="input-group">
                 <input type="password" class="form-control" id="password" name="password" required minlength="8"
                     placeholder="Masukkan password (minimal 8 karakter)">
-                <span class="input-group-text" id="toggle-password" style="cursor: pointer;">
-                    <i class="fas fa-eye" id="password-icon"></i>
-                </span>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="toggle-password" style="cursor: pointer;">
+                        <i class="fas fa-eye" id="password-icon"></i>
+                    </span>
+                </div>
+                <div class="invalid-feedback">
+                    Password harus minimal 8 karakter.
+                </div>
             </div>
-            <small class="form-text text-muted">Password harus memiliki minimal 8 karakter.</small>
-            <button type="submit" class="btn btn-login btn-block">Login</button>
         </div>
+
+        <button type="submit" class="btn btn-login btn-block">Login</button>
     </form>
 </div>
 

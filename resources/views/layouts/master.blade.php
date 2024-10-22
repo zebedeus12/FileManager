@@ -110,6 +110,29 @@
             passwordIcon.classList.add('fa-eye');
         }
     });
+
+    // Validasi form menggunakan JavaScript
+    document.getElementById('login-form').addEventListener('submit', function (event) {
+        const emailField = document.getElementById('email');
+        const passwordField = document.getElementById('password');
+
+        // Periksa email valid
+        if (!emailField.checkValidity()) {
+            emailField.classList.add('is-invalid');
+            event.preventDefault(); // Mencegah form submit jika tidak valid
+        } else {
+            emailField.classList.remove('is-invalid');
+        }
+
+        // Periksa password minimal 8 karakter
+        if (passwordField.value.length < 8) {
+            passwordField.classList.add('is-invalid');
+            event.preventDefault(); // Mencegah form submit jika tidak valid
+        } else {
+            passwordField.classList.remove('is-invalid');
+        }
+    });
 </script>
+
 
 </html>
