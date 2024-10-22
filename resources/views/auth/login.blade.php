@@ -38,7 +38,7 @@
         </div>
     @endif
 
-    <form action="{{ route('login') }}" method="POST" id="login-form">
+    <form action="{{ route('login.submit') }}" method="POST" id="login-form">
         @csrf
         <div class="form-group">
             <label for="email">Email:</label>
