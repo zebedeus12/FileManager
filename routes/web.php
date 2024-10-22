@@ -7,8 +7,3 @@ use App\Http\Controllers\Auth\LoginController;
 Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
-//dashboard
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth');
